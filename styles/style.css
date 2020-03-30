@@ -1,0 +1,213 @@
+@font-face{
+  font-family: "Chauncy";
+  src: url('../fonts/Chauncy\ Fatty\ Fatty.ttf');
+}
+/* ESTILOS BODY */
+body{
+  /* background: linear-gradient(90deg, rgba(236,224,73,1) 7%, rgba(253,134,0,1) 58%, rgba(255,122,0,1) 100%, rgba(255,110,2,1) 100%); */
+  /* background: linear-gradient(to right, rgba(255,241,89,1) 0%, rgba(242,161,67,1) 25%, rgba(247,154,134,1) 50%, rgba(242,161,67,1) 75%, rgba(255,241,89,1) 100%); */
+  /* background: linear-gradient(to right, rgba(255,198,186,1) 0%, rgba(250,196,60,1) 11%, rgba(250,196,60,1) 51%, rgba(250,196,60,1) 90%, rgba(255,198,186,1) 100%); */
+  background: linear-gradient(to bottom, rgb(255, 100, 72) 0%, rgb(214, 100, 7) 100%);
+}
+#back-tela{
+  background-image: url('../img/tela.jpg');
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  opacity: 0.15;
+  z-index: -10;
+}
+/* ESTILOS HEADER */
+header{
+  position: sticky;
+  top:0;
+  width: 100%;
+  padding: 0 5%;
+  margin: auto;
+  height: 12vh;
+  z-index: 100;
+  background: linear-gradient(90deg, rgba(236,224,73,1) 7%, rgba(253,134,0,1) 58%, rgba(255,122,0,1) 100%, rgba(255,110,2,1) 100%);
+  box-shadow: 0px 11px 21px -9px rgba(218, 69, 0, 0.99);
+}
+
+#logo-contenedor{
+  height: 5em;
+}
+#logo-contenedor img{
+  position: absolute;
+}
+#iso{
+  top:5em;
+  left:24em;
+  height: 25em;
+  width: auto;
+  transition: all 0.6s ease;
+}
+.iso-top{
+  top: 0!important;
+  left: 2em!important;
+  height: 5em!important;
+  width: auto;
+  transition: all 1s ease!important;
+}
+#logotipo{
+  height: 15em;
+  top:30em;
+  left:15em;
+  width: auto;
+  transition: all 0.6s ease;
+}
+.logo-top{
+  height: 4em!important;
+  top:1em!important;
+  left:8em!important;
+  width: auto;
+  transition: all 1s ease!important;
+}
+#nav-menu-container {
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 0.5em;
+}
+#lista{
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 0;
+  margin-top: 3%;
+  padding: 0;
+  list-style: none;
+  font-family: 'Quicksand', sans-serif;
+}
+#lista a{
+  color: white;
+  font-size: 1.4em;
+}
+/* ESTILOS MAIN */
+section{
+  height: 88vh;
+}
+.title{
+  font-family: "Chauncy", cursive;
+  color: #f79b86;
+  -webkit-text-stroke: 1px white;
+  font-size: 3em;
+}
+.info{
+  color: white;
+  margin: 0 10vw;
+  font-size: 1.5em;
+  margin-bottom: 1em;
+}
+/* ESTILOS HOME */
+#inicio{
+  background-image: url('../img/grupo.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.7;
+}
+/* ESTILOS ABOUT */
+#about .title-m{
+  font-family: "Chauncy", cursive;
+  -webkit-text-stroke: 1px white;
+  color: red;
+  font-size: 1.3em;
+}
+.tarjeta{
+  background-color: white;
+  border-radius: 1em;
+  height: 57vh;
+  box-shadow: 0px 15px 21px -9px rgba(0,0,0,0.99);
+}
+.tarjeta img{
+  width: 100%;
+  height: 35%;
+  margin: 1em 0;
+  border-radius: 1em;
+}
+.row{
+  justify-content: space-between;
+}
+.col-4{
+  flex-basis: 30% !important;
+}
+/* ESTILOS DETAIL */
+.mini-tela{
+  background-color: white;
+  height: 24vh;
+  margin: 1em;
+  border-radius: 1em;
+  background-image: url('../img/lana.jpg');
+  background-size: cover;
+  -webkit-box-shadow: 0px 10px 30px -11px rgb(0, 0, 0);
+  -moz-box-shadow: 0px 10px 30px -11px rgb(0, 0, 0);
+  box-shadow: 0px 10px 30px -11px rgb(0, 0, 0);
+}
+.mini-tela img{
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 1em;
+}
+.col-3{
+  max-width: 22%!important;
+  padding: 0!important;
+}
+.mini-tela.vacio{
+  opacity: 0.5;
+}
+/* ESTILOS CONTACTO */
+.contacto{
+  width: 20%;
+  filter: grayscale();
+  margin-bottom: 3em;
+}
+.contacto:hover{
+  filter: none;
+  font-size: 1.5em;
+  margin-bottom: 0;
+  transition: all 0.3s;
+}
+.contact-icon{
+  width: 4em;
+}
+.contact-text{
+  color: white;
+  font-size: 1.2em;
+}
+.contacto a{
+  text-decoration: none;
+}
+/* ESTILOS BACK-TOP */
+.back-to-top{
+  position: fixed;
+  background: #e84656;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  right: 15px;
+  bottom: 15px;
+  transition: background 0.5s ease-in-out;
+  outline:none;
+  text-decoration: none;
+  }
+  .back-to-top i {
+  font-size: 34px;
+  padding-top: 6px;
+  }
+
+/* ESTILOS FOOTER */
+#footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2vh 0;
+  width: 98.5vw; 
+  background: rgb(251,146,227);
+  background: linear-gradient(90deg, rgba(251,146,227,1) 7%, rgba(255,196,155,1) 50%, rgba(255,104,248,1) 100%, rgba(255,110,2,1) 100%);
+}
+
+
