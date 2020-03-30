@@ -54,6 +54,20 @@ $('.nav-menu a').on('click',function() {
     }
   }
 });
+$('#btn-menu').on('click',function(){
+  $('#nav-menu-container').addClass('active');
+  $('#overlay').addClass('active');
+})
+
+$('#overlay').on('click',function(){
+  $('#nav-menu-container').removeClass('active');
+  $('#overlay').removeClass('active');
+})
+
+$('#lista li a').on('click',function(){
+  $('#nav-menu-container').removeClass('active');
+  $('#overlay').removeClass('active');
+})
 
 });
 

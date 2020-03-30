@@ -39,16 +39,18 @@ header{
   position: absolute;
 }
 #iso{
-  top:5em;
-  left:24em;
+  left: 50vw;
+  top: 50vh;
   height: 25em;
   width: auto;
-  transition: all 0.6s ease;
+  transform: translate(-50%, -70%);
+  transition: all 1s ease;
 }
 .iso-top{
   top: 0!important;
   left: 2em!important;
   height: 5em!important;
+  transform: none!important;
   width: auto;
   transition: all 1s ease!important;
 }
@@ -57,7 +59,7 @@ header{
   top:30em;
   left:15em;
   width: auto;
-  transition: all 0.6s ease;
+  transition: all 1s ease;
 }
 .logo-top{
   height: 4em!important;
@@ -65,6 +67,9 @@ header{
   left:8em!important;
   width: auto;
   transition: all 1s ease!important;
+}
+#btn-menu{
+  display: none;
 }
 #nav-menu-container {
   font-family: 'Quicksand', sans-serif;
@@ -150,7 +155,7 @@ section{
   padding: 1em;
   border-radius: 1em;
 }
-.col-3{
+.col-md-3{
   max-width: 22%!important;
   padding: 0!important;
 }
@@ -158,6 +163,9 @@ section{
   opacity: 0.5;
 }
 /* ESTILOS CONTACTO */
+#contact .container{
+  padding-top: 3em;
+}
 .contacto{
   width: 20%;
   filter: grayscale();
@@ -209,5 +217,150 @@ section{
   background: rgb(251,146,227);
   background: linear-gradient(90deg, rgba(251,146,227,1) 7%, rgba(255,196,155,1) 50%, rgba(255,104,248,1) 100%, rgba(255,110,2,1) 100%);
 }
+/* ------------ */
+/* MEDIA QUERYS */
+/* ------------ */
 
+@media (max-width: 500px) and (orientation: portrait) {
+section{
+  width: 100vw;
+  height: auto;
+}
+.info{
+  color: white;
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+#header{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+}
+#inicio{
+  height: 100vh;
+}
+/* NAVEGACION */
 
+#iso{
+  height: 15em;
+  width: auto;
+  transform: translate(-50%, -70%);
+  transition: all 1s ease;
+}
+.iso-top{
+  height: 15em!important;
+  transform: translate(-50%, -70%);
+  width: auto;
+  transition: all 1s ease!important;
+}
+#logotipo{
+  height: 6em;
+  bottom:0;
+  left:1em;
+  width: auto;
+  transition: all 1s ease;
+}
+.logo-top{
+  height: 6em!important;
+  bottom:0em!important;
+  left:1em!important;
+  width: auto;
+  transition: all 1s ease!important;
+}
+
+#btn-menu{
+  display: block;
+  position: fixed;
+  background: #e84656;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 50px;
+  right: 15px;
+  top: 15px;
+  outline:none;
+  text-decoration: none;
+  z-index: 99;
+  }
+#btn-menu i {
+  font-size: 34px;
+  padding-top: 6px;
+}
+#overlay.active{
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0.5;
+  z-index: 90;
+}
+#nav-menu-container{
+  display: none;
+}
+#nav-menu-container.active{
+  display: block;
+  position: absolute;
+  transition: all 1s ease;
+  z-index: 100;
+}
+#lista{
+  flex-direction: column;
+  justify-content: start;
+  padding-top: 3em;
+  padding-left: 1em;
+  background-color: #f36a78;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60vw;
+  height: 100vh;
+  margin: 0 !important;
+}
+#lista li{
+  margin-bottom: 1em;
+}
+/* ESTILOS ABOUT */
+
+.tarjeta{
+  background-color: white;
+  padding: 0 1em;
+  margin: 0 auto;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  height: 60vh;
+  box-shadow: 0px 15px 21px -9px rgba(0,0,0,0.99);
+}
+.tarjeta img{
+  width: 100%;
+  height: 35%;
+  margin: 1em 0;
+  border-radius: 1em;
+}
+.tarjeta p{
+  font-size: 0.8em;
+}
+/* ESTILOS DETAILS */
+.mini-tela{
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+.mini-tela.vacio{
+  display: none;
+}
+/* ESTILOS CONTACT */
+.contact-wrap{
+  flex-direction: column;
+  align-items: center;
+}
+.contact-text{
+  width: 50vw;
+  text-align: center;
+}
+footer{
+  display: none!important;
+}
+}
